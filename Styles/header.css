@@ -1,0 +1,251 @@
+.vr-header {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 2000;
+}
+
+.vr-header-left-section {
+  width: 180px;
+}
+
+@media (max-width: 800px) {
+  .vr-header-left-section {
+    width: unset;
+  }
+}
+
+
+.vr-header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+/*LOGO*/
+
+.vr-logo{
+  display: inline-block;
+  font-size: 40px;
+  color: var(--white-color);
+  margin-top: -20px;
+  padding-left: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.vr-logo>span {
+  color: var(--purple-color);
+  font-size: 50px;
+  margin-left: -40px;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: var(--purple-color);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  height: 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.vr-header-right-section {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.fa-solid,
+.fa-regular {
+  color: #ffffff;
+  font-size: 16px;
+}
+.fa-cart-shopping {
+  font-size: 30px;
+  margin-right: 7rem;
+}
+
+.cart-quantity {
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 4px;
+  background: var(--purple-color);
+  border-radius: 50px;
+  width: 18px;
+  text-align: center;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  height: 40px;
+  box-shadow: 0 25px 20px -20px var(--deep-blue);
+  background-color: white;
+  z-index: 3000;
+  margin-top: 25px;
+}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+.nav > .nav-header > .nav-title a{
+  display: inline-block;
+  font-size: 40px;
+  color: var(--deep-blue);
+  margin-top: -20px;
+  padding-left: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px; 
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color:var(--deep-blue);
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  position: sticky
+}
+
+.nav > .nav-links > a:hover {
+  border-radius: 10px;
+  transition: .50s;
+  background-color: var(--purple-color);
+  padding: 5px 30px;
+  color: white;
+}
+    /*---------Menu Header--------------*/
+    @media (max-width:1200px) {
+      .nav{
+        margin-top: 55px;
+      }
+    }
+
+    @media (max-width:768px) {
+      .nav{
+       background: black;
+      }
+      .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+      .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+      .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: var(--deep-blue);
+        border-radius: 30px;
+      }
+      .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+      .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+      }
+      .nav > .nav-links > a {
+        display: block;
+        width: 70%;
+        font-size: 22px;
+        background: #01051b9e;
+        margin: 5px;
+        color: #fff;
+        border-radius: 10px;
+        
+      }
+      .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+      }
+      .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+    }
+
+
+
+
+
